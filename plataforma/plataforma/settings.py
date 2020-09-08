@@ -25,9 +25,10 @@ SECRET_KEY = 'fa+ga*6w^r7#y!k)3wk*(+_cr!nk-jdrwp#ok=dm^&lfn@8*-$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-
+if(DEBUG):
+    CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,11 +41,17 @@ INSTALLED_APPS = [
     #own apps
     'cursos',
     #third party apps
-    'rest_framework'
+    'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
+    'usuarios',
+    'notificaciones'
 
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -132,3 +139,15 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT= os.path.join(os.path.dirname(BASE_DIR), "media_root")
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+

@@ -4,6 +4,7 @@ import './App.css';
 import NormalNavigation from './components/Navigation/NormalNavigation/normalNavigation';
 
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

@@ -24,6 +24,8 @@ from cursos.views import CursoListView, CursoDetailView
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('api/', include('cursos.urls')),
+    path('api/', include('notificaciones.urls')),
+    path('auth/', include('usuarios.urls')),
     re_path(r'^app(?:.*)/?$', TemplateView.as_view(template_name = 'index.html')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

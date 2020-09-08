@@ -33,3 +33,15 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  color: black !important;
+}
+
+a:hover{
+  color: rgb(99, 187, 103) !important;
+}
+
+.card:hover{
+  border: 2px rgb(187, 187, 187) solid !important;
+}

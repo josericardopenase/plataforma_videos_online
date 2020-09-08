@@ -5,7 +5,12 @@ from rest_framework import serializers
 class ApartadoGeneralSerializer(serializers.ModelSerializer):
     class Meta:
         model = apartado
-        fields = ('id','titulo', 'descripcion')
+        fields = ('id','titulo', 'orden')
+
+class ApartadoDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = apartado
+        fields = ('id','titulo','descripcion', 'video')
 
 
 class ProfesorSerializer(serializers.ModelSerializer):

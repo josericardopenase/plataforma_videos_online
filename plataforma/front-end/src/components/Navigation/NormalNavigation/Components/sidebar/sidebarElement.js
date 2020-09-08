@@ -28,7 +28,7 @@ export default function SidebarElement(props) {
 
       <li style={styles.element}>
         <Link to={props.locationPath} onClick = {() => props.onClick(props.id)}>
-              <svg style={styles.icon} viewBox="0 0 16 16" class="bi bi-archive-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <svg style={styles.icon} viewBox="0 0 16 16" className="bi bi-archive-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   {props.path}
               </svg>
           </Link>
