@@ -10,7 +10,7 @@ export default function Course(props) {
 
 
         <div className="col-xl-3 col-lg-6 p-0"  style={props.style}>
-            <Link to={`/curso/${obj.id}`} className="text-decoration-none">
+            <Link to={`app/curso/${obj.id}`} className="text-decoration-none">
                 <div className="card mr-5 h-100" style={styles.card}>
                     
                     <img className="card-img-top" src = {'https://via.placeholder.com/350x150'} style={{borderRadius: "0.9rem"}} />

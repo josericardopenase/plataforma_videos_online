@@ -19,7 +19,8 @@ const useApiCallback = (apiFunc, callback) => {
     
         setData(data.data)
 
-        callback(data.data)
+        if(data.ok)
+          callback(data.data)
 
         
 

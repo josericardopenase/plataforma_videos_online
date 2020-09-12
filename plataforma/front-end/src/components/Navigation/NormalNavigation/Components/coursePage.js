@@ -51,7 +51,7 @@ export default function CoursePage(props) {
             !cursos.loading ? <CourseSidebar id={idApartado} obj = {cursos.data} onClick={SecureSetApartadoId} ></CourseSidebar> : null
           } 
           {
-            !cursos.loading && idApartado !== null ? <CourseApartado id = {idApartado} changeApartados={changeApartados}></CourseApartado> : null
+            !cursos.loading && idApartado !== null ? <CourseApartado id = {idApartado} changeApartados={changeApartados} first =  {cursos.data.apartados[0].id} last = {cursos.data.apartados[cursos.data.apartados.length - 1].id}></CourseApartado> : null
           }
 
 

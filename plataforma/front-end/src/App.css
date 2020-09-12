@@ -45,3 +45,14 @@ a:hover{
 .card:hover{
   border: 2px rgb(187, 187, 187) solid !important;
 }
+
+.notificacion:hover{
+  background-color: rgb(241, 241, 241);
+  cursor: "pointer";
+}
+
+.transparent{
+  background-color: #F5F5F5 !important;
+  color: transparent !important;
+  cursor: "default"
+}

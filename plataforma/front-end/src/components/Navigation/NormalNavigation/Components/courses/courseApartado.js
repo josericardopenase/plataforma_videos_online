@@ -29,13 +29,13 @@ export default function CourseApartado(props) {
             <div className="flex-column w-100">
 
                 {/* NEXT VIDEO PREV VIDEO CONTROLS */}
-                <div className="d-flex justify-content-center mb-5">
-                    <div  style={styles.controles1} onClick={() => props.changeApartados(-1)}>
+                <div className="row justify-content-center mb-5">
+                   <div  style={styles.controles1} className={`col-6 text-center ${props.id === props.first ? "transparent" : ""}`} onClick={() => props.changeApartados(-1)}>
                         Video Anterior
-                    </div>
-                    <div  style={styles.controles2} onClick={() => props.changeApartados(1)}>
+                     </div> 
+                   <div  style={styles.controles2} className={`col-6 text-center ${props.id === props.last ? "transparent" : ""}`} onClick={() => props.changeApartados(1)}>
                         Video siguiente
-                    </div>
+                    </div> 
 
                 </div>
 
@@ -58,7 +58,7 @@ const styles = {
         height: "100vh"
     },
     controles1 : {
-        padding: "0.8rem 10rem",
+        padding: "0.8rem 0rem",
         fontSize: "20px",
         color: "white",
         backgroundColor: "#FF7B7B",
@@ -66,14 +66,17 @@ const styles = {
         cursor: "pointer"
     },
     controles2 : {
-        padding: "0.8rem 10rem",
+        padding: "0.8rem 0rem",
         fontSize: "20px",
         color: "white",
         backgroundColor: "#6eBB67",
         borderRadius: "0px 0px 20px 0px",
         cursor: "pointer"
     },
-
+    controlesTransparentes: {
+        backgroundColor: "#F5F5F5",
+        color: "transparent"
+    }
 
 
 }

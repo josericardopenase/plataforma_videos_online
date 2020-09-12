@@ -19,7 +19,8 @@ export default function SidebarProfile(props) {
   return (
     <div style={styles.container}>
         <img style={styles.icon} src = {'https://via.placeholder.com/350'} / >
-
+        
+        
 
     </div>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
 import GeneralStyles from './generalStyles';
 import SearchBar from './dashboard/searchbar';
-import SidebarProfile from './sidebar/sidebarProfile';
 import Notification from './dashboard/notification';
 import Welcome from './dashboard/welcome';
 import Course from './dashboard/course';
 import CoursesList from './dashboard/coursesList';
+import DashboardProfile from './dashboard/dashboardProfile'
 
 export default function Dashboard() {
   return (
@@ -17,7 +17,7 @@ export default function Dashboard() {
 
             <div className="row justify-content-center align-middle">
               <Notification style={{marginRight: "1.5rem", heigth: "100%"}}></Notification>
-              <SidebarProfile></SidebarProfile>
+              <DashboardProfile></DashboardProfile>
             </div>
 
         </div>
